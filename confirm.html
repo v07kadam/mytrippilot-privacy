@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyTripPilot — Email Confirmed</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #f8fafc; display: flex; align-items: center; justify-content: center;
+           min-height: 100vh; margin: 0; }
+    .card { background: #fff; border-radius: 16px; padding: 40px 32px; max-width: 420px;
+            width: 90%; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .icon { font-size: 56px; margin-bottom: 16px; }
+    h1 { color: #2c3e50; font-size: 24px; margin-bottom: 10px; }
+    p { color: #6b7280; line-height: 1.6; margin-bottom: 24px; }
+    .badge { display: inline-block; background: #d1fae5; color: #065f46;
+             padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
+    .error { color: #dc2626; font-size: 14px; margin-top: 12px; display: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon" id="icon">⏳</div>
+    <h1 id="title">Confirming your email...</h1>
+    <p id="body">Please wait a moment.</p>
+    <div id="badge" style="display:none"></div>
+    <p class="error" id="error"></p>
+  </div>
+
+  <script>
+    const hash = new URLSearchParams(window.location.hash.replace('#', '?'));
+    const type = hash.get('type');
+    const error = hash.get('error_description');
+
+    if (error) {
+      document.getElementById('icon').textContent = '❌';
+      document.getElementById('title').textContent = 'Confirmation failed';
+      document.getElementById('body').textContent = decodeURIComponent(error);
+    } else if (type === 'signup' || type === 'email_change' || !type) {
+      document.getElementById('icon').textContent = '✅';
+      document.getElementById('title').textContent = 'Email confirmed!';
+      document.getElementById('body').textContent = 'Your MyTripPilot account is active. Open the app to sign in.';
+      const badge = document.getElementById('badge');
+      badge.style.display = 'inline-block';
+      badge.className = 'badge';
+      badge.textContent = '✓ Account activated';
+    } else if (type === 'recovery') {
+      document.getElementById('icon').textContent = '🔑';
+      document.getElementById('title').textContent = 'Password reset ready';
+      document.getElementById('body').textContent = 'Return to the MyTripPilot app and sign in with your new password.';
+    }
+  </script>
+</body>
+</html>
