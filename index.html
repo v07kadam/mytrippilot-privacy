@@ -144,7 +144,7 @@
     <header class="header">
         <h1>Privacy Policy for MyTripPilot</h1>
         <p class="effective-date">
-            <strong>Effective Date:</strong> August 24, 2026
+            <strong>Effective Date:</strong> October 23, 2026
         </p>
     </header>
 
@@ -186,6 +186,7 @@
 
         <ul>
             <li>Email address</li>
+            <li>Display name</li>
             <li>Password or authentication credentials required to authenticate your account</li>
             <li>Account and session information required to maintain your signed-in session</li>
         </ul>
@@ -275,6 +276,54 @@
         </p>
 
 
+        <h3>2.6 Trip Cover Images</h3>
+
+        <p>
+            If you choose to add a cover image to a trip, the App uploads the
+            image you select from your device's photo library to our cloud
+            storage provider. Cover images are optional.
+        </p>
+
+        <p>
+            The App uses your device's system photo picker. It does not request
+            access to your whole photo library and only receives the single
+            image you choose.
+        </p>
+
+        <p>
+            Cover images are stored at a web address (URL) that is not listed
+            or searchable, but is not password-protected. Anyone who obtains
+            the exact URL can view the image. Do not use images that contain
+            personal, sensitive, or confidential information.
+        </p>
+
+
+        <h3>2.7 Reports and Moderation Information</h3>
+
+        <p>
+            If you report a trip, its content, or another member from within
+            the App, we collect:
+        </p>
+
+        <ul>
+            <li>The trip the report relates to</li>
+            <li>Your account identifier (as the reporter)</li>
+            <li>The account identifier of the reported member, if you report a member</li>
+            <li>The reason you select and any details you write</li>
+            <li>The date and time of the report</li>
+        </ul>
+
+        <p>
+            If a trip owner removes a member, we record that the member was
+            removed from that trip so that they cannot rejoin it with the
+            invite code.
+        </p>
+
+        <p>
+            The reported member is not told who submitted a report.
+        </p>
+
+
         <h2>3. How We Use Information</h2>
 
         <p>
@@ -292,6 +341,9 @@
             <li>Record settlements</li>
             <li>Calculate budgets and spending summaries</li>
             <li>Manage packing checklists</li>
+            <li>Display trip cover images to trip members</li>
+            <li>Review reports of objectionable content or behaviour and take moderation action</li>
+            <li>Prevent removed members from rejoining a trip</li>
             <li>Generate reports and exports</li>
             <li>Provide the features and functionality of the App</li>
             <li>Maintain and improve the security, reliability, and performance of the App</li>
@@ -329,12 +381,16 @@
             <li>Expense information</li>
             <li>Checklist information</li>
             <li>Settlement information</li>
+            <li>Display names</li>
+            <li>Trip cover images</li>
+            <li>Content reports and trip membership/removal records</li>
         </ul>
 
         <p>
             The App currently uses <strong>Supabase</strong> (<a href="https://supabase.com">supabase.com</a>)
-            as its cloud database and authentication provider. Supabase processes
-            data in accordance with its own privacy policy and data processing agreements.
+            as its cloud database, authentication, and file storage provider.
+            Supabase processes data on our behalf in accordance with its own
+            privacy policy and data processing agreements.
         </p>
 
         <p>
@@ -403,6 +459,12 @@
             when you intentionally join or invite them to that trip.
         </p>
 
+        <p>
+            Trip cover images are stored at a URL that is not password-protected.
+            If a trip member copies and shares that URL, anyone who receives it
+            can view the image.
+        </p>
+
 
         <h2>7. Data Security</h2>
 
@@ -424,6 +486,12 @@
         </ul>
 
         <p>
+            Trip cover images are an exception to the access controls above:
+            they are protected only by an unlisted URL, as described in
+            section 2.6.
+        </p>
+
+        <p>
             However, no method of electronic transmission or storage can be
             guaranteed to be completely secure.
         </p>
@@ -439,16 +507,27 @@
         </p>
 
         <p>
-            Upon account deletion, personal data associated exclusively with
-            the deleted account will be removed from our systems within
-            <strong>30 days</strong>, except where retention is required by law.
+            When you delete your account in the App, your account is deleted
+            immediately. When you request deletion by email, we complete it
+            within <strong>7 days</strong> of verifying your request. In both
+            cases, personal data associated exclusively with your account,
+            including your uploaded cover images, is removed from our active
+            systems within <strong>7 days</strong>, except where retention is
+            required by law.
         </p>
 
         <p>
-            Trip and expense information may also be retained as part of a
-            shared trip until the relevant trip or associated data is deleted
-            in accordance with the App's functionality and applicable data
-            deletion procedures.
+            Trips you own are deleted for all of their members when your
+            account is deleted. Expenses, settlements, and participant names
+            you added to trips owned by other people remain in those trips so
+            that the other members' records stay accurate, but they are no
+            longer linked to your account.
+        </p>
+
+        <p>
+            Reports you submit are kept for up to 12 months for moderation and
+            safety purposes. After your account is deleted they are no longer
+            linked to you.
         </p>
 
 
@@ -482,9 +561,11 @@
         </p>
 
         <p>
-            Deletion of an account may also remove trips, expenses, checklists,
-            settlements, and other data associated exclusively with that account,
-            subject to the application's shared-trip data model.
+            Deleting your account removes your account, trips you own
+            (including for their members), your checklist data, your cover
+            images, and your trip memberships. Expenses and settlements you
+            added to trips owned by other users remain in those trips without
+            a link to your account.
         </p>
 
 
@@ -497,8 +578,14 @@
 
         <p>
             Information that you add to a shared trip, including participant
-            names, expenses, balances, settlements, and checklist information,
-            may be visible to other authorized members of that trip.
+            names, your display name, expenses, balances, settlements,
+            checklist information, and the trip cover image, may be visible to
+            other authorized members of that trip.
+        </p>
+
+        <p>
+            Trip owners can remove members. Any member can leave a trip or
+            report content and other members from within the App.
         </p>
 
         <p>
@@ -517,8 +604,11 @@
         </p>
 
         <p>
-            The App will request permissions only when required for a
-            particular feature.
+            The App requires internet access to sync your data. To set an
+            optional trip cover image, the App opens your device's system
+            photo picker, which does not require a storage or photo library
+            permission. The App does not request camera, microphone,
+            location, or contacts access.
         </p>
 
         <p>
